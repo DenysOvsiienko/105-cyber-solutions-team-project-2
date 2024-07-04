@@ -25,12 +25,17 @@
 }
 
 .mobile-menu-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   width: 28px;
   height: 28px;
-  background-color: #fff;
+  background-color: transparent;
+}
+
+.mobile-menu-btn-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  fill: #fafafa;
 }
 
 /* ___Tablet adaptation_________________________________ */

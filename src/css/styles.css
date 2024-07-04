@@ -64,7 +64,7 @@
 /* ___Mobile adaptation_________________Common styles___ */
 .container {
   min-width: 320px;
-  max-width: 375;
+  max-width: 375px;
   padding-left: 16px;
   padding-right: 16px;
   margin-right: auto;
