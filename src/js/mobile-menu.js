@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menu-toggle');
+  const menuToggle = document.getElementById('.header-order-link');
   const menuClose = document.getElementById('menu-close');
   const menu = document.getElementById('menu');
   const menuLinks = menu.querySelectorAll('a');
