@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.mobile-menu-btn');
   const menuClose = document.getElementById('menu-close');
-  const menu = document.getElementById('menu');
+  const menu = document.getElementById('mobile-menu');
   const menuLinks = menu.querySelectorAll('a');
 
   function openMenu() {
