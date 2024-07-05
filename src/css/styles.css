@@ -5,6 +5,7 @@
   |============================
 */
 @import url('./reset.css');
+@import url('./base.css');
 @import url('./header.css');
 @import url('./hero.css');
 @import url('./about-me.css');
@@ -46,44 +47,3 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-/* ====================Common styles==================== */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-/* ___Mobile adaptation_________________Common styles___ */
-.container {
-  min-width: 320px;
-  max-width: 375;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* ___Tablet adaptation_________________Common styles___ */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
-/* ___Desktop adaptation________________Common styles___ */
-@media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
-}
-/* ===================/Common styles==================== */
