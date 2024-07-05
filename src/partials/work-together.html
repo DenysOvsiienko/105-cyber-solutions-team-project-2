@@ -1,0 +1,63 @@
+<div class="container footer-container">
+  <picture class="footer-ava">
+    <source
+      srcset="
+        ./img/work-together/ava-footer-tab@1x.png 1x,
+        ./img/work-together/ava-footer-tab@2x.png 2x
+      "
+      media="(min-width: 768px)"
+    />
+    <source
+      media="(max-width: 767px)"
+      srcset="
+        ./img/work-together/ava-footer-mob@1x.png 1x,
+        ./img/work-together/ava-footer-mob@2x.png 2x
+      "
+    />
+    <img
+      src="./img/work-together/ava-footer-mob@1x.png"
+      alt="developer's avatar"
+    />
+  </picture>
+  <h2 class="footer-title">
+    Let’s <span class="footer-title-accentColor">work</span> <br />
+    together
+  </h2>
+
+  <form class="footer-form">
+    <label for="email">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="clients@gmail.com"
+        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        required
+        class="footer-form-input-mail"
+      />
+    </label>
+
+    <label for="comments">
+      <input
+        type="text"
+        name="comments"
+        id="comments"
+        placeholder="comments"
+        class="footer-form-input-text"
+      />
+    </label>
+    <button type="submit" class="form-submit-btn">Send</button>
+  </form>
+  <ul class="footer-contact-list">
+    <li class="footer-contact-item">
+      <a href="mailto:lloydjefferson@gmail.com" class="footer-contact-link"
+        >lloydjefferson@gmail.com</a
+      >
+    </li>
+    <li class="footer-contact-item">
+      <a href="tel:+380 11 1111 11 11" class="footer-contact-link"
+        >+380 11 1111 11 11</a
+      >
+    </li>
+  </ul>
+</div>
