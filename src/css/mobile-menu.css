@@ -1,7 +1,7 @@
 .mobile-menu-close {
   position: absolute;
-  top: 30px;
-  right: 20px;
+  top: 32px;
+  right: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +39,9 @@
   height: 100%;
   padding-top: 302px;
   padding-bottom: 64px;
+  background-image: url(/img/hero/hero-mob.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .mobile-menu-content {
   display: flex;
@@ -79,4 +82,10 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
+}
+
+.mobile-order-btn:hover,
+.mobile-order-btn:focus,
+.mobile-order-btn:active {
+  background-color: #e0373f;
 }
