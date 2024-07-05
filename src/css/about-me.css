@@ -98,6 +98,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 36px;
+  height: 36px;
+}
+
+.ac-button-about-me:hover,
+.ac-button-about-me:focus {
+  border: 1px solid rgba(250, 250, 250, 0.5);
 }
 
 .block-about-me {
@@ -107,6 +114,11 @@
   flex-direction: row;
   gap: 23px;
   margin-bottom: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .block-about-me {
+    margin-bottom: 8px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -178,6 +190,12 @@
   display: flex;
 }
 
+@media only screen and (min-width: 1440px) {
+  .swiper-wrapper {
+    margin-left: 32px;
+  }
+}
+
 .circle {
   display: flex;
   justify-content: center;
@@ -190,6 +208,11 @@
 .active-slide {
   background-color: #ed3b44;
   border-radius: 50%;
+}
+
+.active-slide:hover,
+.active-slide:focus {
+  background-color: #e0373f;
 }
 
 @media only screen and (min-width: 768px) {
@@ -215,6 +238,17 @@
     display: none;
   }
 }
+@media only screen and (max-width: 767px) {
+  .slide-mob {
+    display: none;
+  }
+
+  .circle {
+    width: 130px;
+    height: 130px;
+    font-size: 20px;
+  }
+}
 
 .sviper-svg {
   display: flex;
@@ -225,7 +259,6 @@
 .swiper-button-next {
   stroke-width: 2px;
   stroke: #3b3b3b;
-
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -233,4 +266,25 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper-button-next svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .swiper-button-next {
+    stroke-width: 2px;
+    stroke: #3b3b3b;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 }
