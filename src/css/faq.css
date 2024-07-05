@@ -1,17 +1,18 @@
 /* ___Mobile adaptation____________________ */
 .container-faq-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-bottom: 84px;
+  padding-bottom: 64px;
 }
 .title-faq {
   line-height: 1.5;
   color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
 }
-
+.list-faq {
+  display: flex;
+  flex-direction: column;
+}
 .item-faq {
-  
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 .title-faq-wrapper {
   display: flex;
@@ -19,73 +20,111 @@
   justify-content: space-between;
 }
 .item-title-faq {
-  font-size: 20px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
-  min-width: 285px;
-}
-.faq-button {
-  border-image: initial;
-  background-color: #1c1d20;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 100px;
-  padding: 7px;
-  width: 34px;
-  height: 34px;
-}
-.icon-faq {
-}
-.text-faq {
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
-  margin-bottom: 20px;
-  max-width: 100%;
-}
-
-.line-faq {
-  margin-bottom: 20px;
-  stroke-width: 1px;
-  stroke: rgba(250, 250, 250, 0.2);
-}
-.list-faq .item-faq:last-child .line-faq {
-  display: none;
-}
-/* ___Tablet adaptation____________________ */
-@media screen and (min-width: 768px) {
-  .item-faq {
-    width: 100%;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    min-width: 285px;
   }
-  .item-title-faq {
-    margin-bottom: 26px;
-    min-width: 574px;
+  .faq-button {
+    border-image: initial;
+    background-color: #1c1d20;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 100px;
+    padding: 7px;
+    width: 34px;
+    height: 34px;
+    margin-top: 20px;
   }
   .text-faq {
-    margin-bottom: 24px;
-    min-width: 656px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+    padding-bottom: 20px;
+    max-width: 100%;
   }
-  .list-faq .item-faq:last-child .line-faq {
-    display: block;
-  }
+
+/* ___Tablet adaptation____________________ */
+ @media screen and (min-width: 768px) {
+    .container-faq-wrapper {
+        padding-bottom: 96px;
+      }
+        .item-title-faq {
+        margin-top: 32px;
+        margin-bottom: 26px;
+        max-width: 584px;
+      }
+      .faq-button {        
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        margin-top: 32px;
+      }
+      .text-faq {
+        padding-bottom: 24px;        
+      }
 }
 
 /* ___Desktop adaptation___________________ */
-@media screen and (min-width: 1440px) {
-  
-    .container-list-faq-wrapper {
-        display: flex;
-        justify-content: space-between;
-      }      
+@media screen and (min-width: 1440px) {  
+    .container-faq-wrapper {
+        padding-bottom: 161px;
+      }        
       .list-faq {
         display: flex;
-        flex-direction: column;        
+        flex-direction: row;
+        flex-wrap: wrap;            
       }
       .item-faq {
-        width: 720px;
+        width: calc((100% - 32px) / 2);         
+        border: 1px solid rgba(250, 250, 250, 0.2);
+        align-items: stretch;       
+      }  
+        .item-title-faq {
+        margin-top: 32px;
+        margin-bottom: 26px;       
+        max-width: 574px;
       }
-      .text-faq {
-        margin-bottom: 26px;
-        max-width: 656px;
-}
+        .faq-button {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        margin-top: 32px;
+    }
+        .text-faq {
+        padding-bottom: 54px;
+        max-width: 100%;
+    }  
+        .item-order-z {
+        order: -1;
+    }
+        .item-order-o {
+        order: 10;
+    }
+        .item-order-t {
+        order: 18;
+    }
+  
+        .item-order-thr {
+        order: 0;
+    }
+        .item-order-four {
+        order: 15;
+    }
+        .item-order-five {
+        order: 20;
+    }
+        .item-order-z,
+        .item-order-o,
+        .item-order-t {
+        border-left: none;
+        padding-right: 32px;
+    }
+        .item-order-thr,
+        .item-order-four,
+        .item-order-five {
+        border-right: none;
+        padding-left: 32px;
+    }
 }
