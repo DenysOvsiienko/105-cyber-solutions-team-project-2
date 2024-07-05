@@ -31,12 +31,6 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .text-box-about-me {
-    width: 704px;
-  }
-}
-
 @media only screen and (min-width: 1440px) {
   .text-box-about-me {
     width: 680px;
@@ -69,7 +63,6 @@
 /*/////////      Section Accordion      ///////////*/
 
 .about-me-text {
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
 }
@@ -114,14 +107,6 @@
   flex-direction: row;
   gap: 23px;
   margin-bottom: 12px;
-}
-
-@media only screen and (max-width: 767px) {
-  .ac-button-about-me {
-    padding: 9px;
-    width: 36px;
-    height: 36px;
-  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -186,9 +171,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
-  color: #fafafa;
   position: relative;
 }
 
@@ -208,21 +190,6 @@
 .active-slide {
   background-color: #ed3b44;
   border-radius: 50%;
-}
-
-@media only screen and (max-width: 767px) {
-  .swiper-container-about-me {
-    margin-top: 32px;
-  }
-
-  .circle {
-    width: 130px;
-    height: 130px;
-    font-size: 16px;
-  }
-  .slide-mob {
-    display: none;
-  }
 }
 
 @media only screen and (min-width: 768px) {
