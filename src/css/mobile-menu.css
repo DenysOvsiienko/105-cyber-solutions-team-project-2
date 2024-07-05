@@ -8,7 +8,6 @@
   width: 28px;
   height: 28px;
   padding: 0;
-  stroke: #fafafa;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -43,6 +42,17 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media only screen and (min-resolution: 192dpi) and (max-width: 767px) {
+  .mobile-menu-container {
+    background-image: url(/img/hero/hero-mob@2x.png);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .mobile-menu-container {
+    display: none;
+  }
+}
 .mobile-menu-content {
   display: flex;
   flex-direction: column;
@@ -51,8 +61,24 @@
 .mobile-menu-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
+
+.mobile-menu-list > li {
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-list > li:hover,
+.mobile-menu-list > li:focus,
+.mobile-menu-list > li:active {
+  color: #ed3b44;
+  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 2px solid #ed3b44;
+}
+
 .mobile-menu.open {
   visibility: visible;
   opacity: 1;
@@ -60,14 +86,9 @@
 }
 
 .mobile-menu-links {
-  display: block;
   margin: 0 auto;
   text-align: center;
-  color: #fafafa;
-  font-weight: 500;
-  font-size: 16px;
   letter-spacing: -0.02em;
-  text-decoration: underline;
 }
 
 .mobile-order-btn {
