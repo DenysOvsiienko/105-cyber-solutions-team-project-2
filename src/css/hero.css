@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   padding-top: 281px;
   padding-bottom: 32px;
+  margin-bottom: 64px;
 }
 
 .hero-container {
@@ -98,6 +99,7 @@
 @media only screen and (min-width: 1440px) {
   .hero {
     background-image: url(/img/hero/hero-desktop.png);
+    margin-bottom: 96px;
   }
 
   @media only screen and (min-resolution: 192dpi) {
