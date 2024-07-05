@@ -1,0 +1,123 @@
+/* ______Mobile adaptation _______ */
+.container.covers-container {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url(../img/covers/bg-covers.png);
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .container.covers-container {
+    background-image: url(../img/covers/bg-covers@2x.png);
+  }
+}
+.content {
+  position: relative;
+  box-sizing: border-box;
+  min-width: 320px;
+  height: 508px;
+  overflow: hidden;
+}
+.covers-img img {
+  width: 282px;
+  height: 163px;
+}
+
+.marquee-inner {
+  display: flex;
+  transform: rotate(18deg);
+  margin-bottom: 25px;
+}
+
+.marquee-line {
+  flex-shrink: 0;
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+  animation-duration: 25s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.marquee-inner:nth-child(odd) .marquee-line {
+  animation-name: marqueeLineRight;
+}
+
+.marquee-inner:nth-child(even) .marquee-line {
+  animation-name: marqueeLineLeft;
+}
+
+.marquee-inner:nth-child(1) .marquee-line {
+  animation-delay: -3s;
+}
+
+.marquee-inner:nth-child(2) .marquee-line {
+  animation-delay: -1s;
+}
+
+.marquee-inner:nth-child(3) .marquee-line {
+  animation-delay: -2s;
+}
+
+.marquee-inner:nth-child(4) .marquee-line {
+  animation-delay: 0s;
+}
+
+@keyframes marqueeLineRight {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-300%);
+  }
+}
+@keyframes marqueeLineLeft {
+  from {
+    transform: translateX(-300%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ______Tablet adaptation _______ */
+@media screen and (min-width: 768px) {
+  .content {
+    min-width: 768px;
+    height: 960px;
+  }
+  .covers-img img {
+    width: 544px;
+    height: 314px;
+  }
+  .marquee-inner {
+    margin-bottom: 50px;
+  }
+  .section-cover .marquee-line {
+    margin-right: 50px;
+  }
+}
+
+/* ______Desktop adaptation___ */
+@media screen and (min-width: 1440px) {
+  .content {
+    min-width: 1400px;
+  }
+}
+
+.marquee {
+  position: absolute;
+  right: -800px;
+  left: 0;
+  overflow: hidden;
+}
