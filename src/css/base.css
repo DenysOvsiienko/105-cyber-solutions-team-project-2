@@ -31,7 +31,7 @@ section:first-child {
 }
 
 section:last-child {
-  margin: 32px 0 0 0;
+  margin: 32px 0 64px 0;
 }
 
 /* ___Tablet adaptation_________________Common styles___ */
@@ -51,7 +51,7 @@ section:last-child {
   }
 
   section:last-child {
-    margin: 48px 0 0 0;
+    margin: 48px 0 96px 0;
   }
 }
 
@@ -70,7 +70,7 @@ section:last-child {
   }
 
   section:last-child {
-    margin: 82px 0 0 0;
+    margin: 82px 0 164px 0;
   }
 }
 
