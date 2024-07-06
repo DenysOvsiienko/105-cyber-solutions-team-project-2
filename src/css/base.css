@@ -23,7 +23,7 @@
 }
 
 section {
-  margin: 32px 0;
+  padding: 32px 0;
 }
 
 section:first-child {
@@ -31,7 +31,7 @@ section:first-child {
 }
 
 section:last-child {
-  margin: 32px 0 64px 0;
+  padding: 32px 0 64px 0;
 }
 
 /* ___Tablet adaptation_________________Common styles___ */
@@ -43,7 +43,7 @@ section:last-child {
   }
 
   section {
-    margin: 48px 0;
+    padding: 48px 0;
   }
 
   section:first-child {
@@ -51,7 +51,7 @@ section:last-child {
   }
 
   section:last-child {
-    margin: 48px 0 96px 0;
+    padding: 48px 0 96px 0;
   }
 }
 
@@ -62,7 +62,7 @@ section:last-child {
   }
 
   section {
-    margin: 82px 0;
+    padding: 82px 0;
   }
 
   section:first-child {
@@ -70,7 +70,7 @@ section:last-child {
   }
 
   section:last-child {
-    margin: 82px 0 164px 0;
+    padding: 82px 0 164px 0;
   }
 }
 
