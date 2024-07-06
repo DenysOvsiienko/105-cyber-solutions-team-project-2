@@ -24,28 +24,35 @@
     together
   </h2>
 
-  <form class="footer-form">
-    <label for="email">
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="clients@gmail.com"
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-        required
-        class="footer-form-input-mail"
-      />
-    </label>
+  <form class="footer-form" novalidate>
+    <div class="input-mail-box">
+      <label for="email">
+        <input
+          autocomplete="off"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="clients@gmail.com"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          required
+          class="footer-form-input-mail"
+        />
+      </label>
+      <span class="valid-notification"></span>
+    </div>
+    <div>
+      <label for="comments">
+        <input
+          type="text"
+          name="comments"
+          id="comments"
+          placeholder="comments"
+          class="footer-form-input-text"
+          autocomplete="off"
+      /></label>
+      <span class="valid-notif-comm"></span>
+    </div>
 
-    <label for="comments">
-      <input
-        type="text"
-        name="comments"
-        id="comments"
-        placeholder="comments"
-        class="footer-form-input-text"
-      />
-    </label>
     <button type="submit" class="form-submit-btn">Send</button>
   </form>
   <ul class="footer-contact-list">
@@ -61,12 +68,15 @@
     </li>
   </ul>
 </div>
-<div class="backdrop">
+<div class="footer-backdrop is-hidden">
   <div class="footer-modal">
     <button type="button" class="footer-modal-close-btn">
-      <svg class="footer-modal-close-icon" width="22" height="22">
-        <use href="../img/"></use>
+      <svg class="footer-modal-close-icon">
+        <use href="../img/icons.svg#icon-close"></use>
       </svg>
     </button>
+    <div class="modal-content-box"></div>
   </div>
 </div>
+
+<script type="module" src="./js/work-together.js"></script>
