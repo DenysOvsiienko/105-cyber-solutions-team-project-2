@@ -10,13 +10,16 @@ const refs = {
   backDropElem: document.querySelector('.footer-backdrop'),
   closeModalElem: document.querySelector('.footer-modal-close-btn'),
   contentBoxModalElem: document.querySelector('.modal-content-box'),
+  formSubmitBtnElem: document.querySelector('.form-submit-btn'),
 };
-
+console.log(refs.formSubmitBtnElem);
 refs.inputMailElem.addEventListener('input', event => {
   if (!refs.inputMailElem.validity.valid) {
+    refs.formSubmitBtnElem.setAttribute('disabled', '');
     createErrorMailNotif();
   } else {
     createMailSuccessNotif();
+    refs.formSubmitBtnElem.removeAttribute('disabled', '');
   }
 });
 
@@ -54,7 +57,10 @@ window.addEventListener('keydown', event => {
     refs.contentBoxModalElem.innerHTML = '';
   }
 });
-
+refs.backDropElem.addEventListener('click', event => {
+  closeModal();
+  refs.contentBoxModalElem.innerHTML = '';
+});
 function closeModal() {
   refs.backDropElem.classList.add('is-hidden');
 }
@@ -106,7 +112,7 @@ function clearNotifField() {
 const iziToastErrorObj = {
   title: 'Error',
   message: `Sorry, something went wrong...`,
-  backgroundColor: 'rgb(255, 99, 71)',
+  backgroundColor: 'rgb(224, 55, 63)',
   titleColor: 'rgb(255, 255, 255)',
   messageColor: 'rgb(255, 255, 255)',
   messageSize: '16',
