@@ -1,0 +1,113 @@
+.hero {
+  background-image: url(/img/hero/hero-mob.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 281px;
+  padding-bottom: 32px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 100%;
+  text-align: start;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 212px;
+}
+
+.hero-social-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.hero-social-item > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  width: 37px;
+  height: 37px;
+  text-transform: uppercase;
+}
+
+.hero-social-item > a:hover,
+.hero-social-item > a:focus,
+.hero-social-item > a:active {
+  outline: transparent;
+  border: 1px solid rgba(250, 250, 250, 1);
+}
+
+.hero-social-item.hero-email > a {
+  text-transform: none;
+  width: 178px;
+  padding: 10px 12px;
+}
+
+@media only screen and (min-resolution: 192dpi) and (max-width: 767px) {
+  .hero {
+    background-image: url(/img/hero/hero-mob@2x.png);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding-top: 300px;
+    background-image: url(/img/hero/hero-tablet.png);
+  }
+
+  @media only screen and (min-resolution: 192dpi) {
+    .hero {
+      background-image: url(/img/hero/hero-tablet@2x.png);
+    }
+  }
+
+  .hero-social-block {
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .hero-title {
+    font-size: 90px;
+    margin-bottom: 187px;
+  }
+
+  .hero-social-item > a {
+    font-size: 16px;
+    line-height: normal;
+    width: 55px;
+    height: 55px;
+  }
+
+  .hero-social-item.hero-email > a {
+    width: 223px;
+    padding: 18px 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero {
+    background-image: url(/img/hero/hero-desktop.png);
+    margin-bottom: 96px;
+  }
+
+  @media only screen and (min-resolution: 192dpi) {
+    .hero {
+      background-image: url(/img/hero/hero-desctop@2x.png);
+    }
+  }
+
+  .hero-title {
+    margin-bottom: 243px;
+  }
+}
