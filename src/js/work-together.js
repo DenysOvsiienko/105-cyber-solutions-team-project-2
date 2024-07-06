@@ -1,5 +1,7 @@
 'use strict';
 import axios from 'axios';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const refs = {
   formElem: document.querySelector('.footer-form'),
@@ -23,19 +25,19 @@ refs.formElem.addEventListener('submit', async event => {
   if (refs.formElem.elements.email.value === '') {
     createEmptyFieldNotif();
   } else if (refs.inputMailElem.validity.valid) {
-    const email = refs.formElem.elements.email.value;
-    const comment = refs.formElem.elements.comments.value;
+    const email = refs.formElem.elements.email.value.trim();
+    const comment = refs.formElem.elements.comments.value.trim();
     const userData = { email, comment };
     console.log(userData);
     clearNotifField();
     try {
       const response = await createRequest(userData);
-      console.log(response.data);
+      console.log(response);
       const markup = modalTemplate(response);
       refs.contentBoxModalElem.insertAdjacentHTML('afterbegin', markup);
       refs.backDropElem.classList.remove('is-hidden');
     } catch (err) {
-      console.log(err);
+      iziToast.error(iziToastErrorObj);
     }
   }
   event.target.reset();
@@ -100,3 +102,16 @@ function clearNotifField() {
   refs.inputMailElem.classList.remove('input-success');
   refs.spanValidElem.classList.remove('notif-success');
 }
+
+const iziToastErrorObj = {
+  title: 'Error',
+  message: `Sorry, something went wrong...`,
+  backgroundColor: 'rgb(255, 99, 71)',
+  titleColor: 'rgb(255, 255, 255)',
+  messageColor: 'rgb(255, 255, 255)',
+  messageSize: '16',
+  iconColor: 'rgb(255, 255, 255)',
+  theme: 'dark',
+  progressBarColor: 'rgb(255, 255, 255)',
+  position: 'topRight',
+};
