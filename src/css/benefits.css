@@ -3,13 +3,13 @@
 }
 
 .benefits-title {
-    font-size: 24px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: rgba(250, 250, 250, 0.4);
-    text-align: center;
-    margin-bottom: 32px;
+margin-bottom: 32px;
+font-weight: 600;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: rgba(250, 250, 250, 0.4);
 }
 
 .benefits-list {
@@ -38,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 64px;
 }
 
 .benefits-item-title {
