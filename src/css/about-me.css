@@ -62,20 +62,52 @@
 
 /*/////////      Section Accordion      ///////////*/
 
-.about-me-text {
+.accordion-container-about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .accordion-container-about-me {
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .accordion-container-about-me {
+    margin-bottom: 96px;
+  }
+}
+
+.about-me-text,
+.rule-text,
+.education-text {
   line-height: 1.5;
   letter-spacing: -0.02em;
+  width: 340px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me-text,
+  .rule-text,
+  .education-text {
+    width: 704px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .about-me-text,
+  .rule-text,
+  .education-text {
+    width: 612px;
+  }
 }
 
 .ac-about-me {
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .ac-about-me {
-    margin-bottom: 32px;
-  }
 }
 
 .ac-header-about-me {
@@ -104,7 +136,7 @@
 
 .ac-button-about-me:hover,
 .ac-button-about-me:focus {
-  border: 1px solid rgba(250, 250, 250, 0.5);
+  border: 1px solid rgba(250, 250, 250, 1);
 }
 
 .block-about-me {
@@ -130,12 +162,13 @@
 }
 
 .ac-panel-about-me {
+  display: flex;
   background-color: transparent;
 }
 
 @media only screen and (min-width: 1440px) {
   .ac-panel-about-me {
-    margin-left: 696px;
+    justify-content: flex-end;
   }
 }
 
@@ -218,7 +251,6 @@
 @media only screen and (min-width: 768px) {
   .swiper-container-about-me {
     font-size: 20px;
-    margin-top: 64px;
   }
 
   .circle {
@@ -228,11 +260,6 @@
   }
 }
 
-@media only screen and (min-width: 1440px) {
-  .swiper-container-about-me {
-    margin-top: 96px;
-  }
-}
 @media only screen and (min-width: 768px) and (max-width: 1439px) {
   .slide-tab {
     display: none;
@@ -246,11 +273,10 @@
   .circle {
     width: 130px;
     height: 130px;
-    font-size: 20px;
   }
 }
 
-.sviper-svg {
+.swiper-svg {
   display: flex;
   justify-content: center;
   align-items: center;
