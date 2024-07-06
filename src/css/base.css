@@ -22,12 +22,36 @@
   margin-left: auto;
 }
 
+section {
+  padding: 32px 0;
+}
+
+section:first-child {
+  margin: 0 0 32px 0;
+}
+
+section:last-child {
+  padding: 32px 0 64px 0;
+}
+
 /* ___Tablet adaptation_________________Common styles___ */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
+  }
+
+  section {
+    padding: 48px 0;
+  }
+
+  section:first-child {
+    margin: 0 0 48px 0;
+  }
+
+  section:last-child {
+    padding: 48px 0 96px 0;
   }
 }
 
@@ -36,5 +60,18 @@
   .container {
     max-width: 1440px;
   }
+
+  section {
+    padding: 82px 0;
+  }
+
+  section:first-child {
+    margin: 0 0 82px 0;
+  }
+
+  section:last-child {
+    padding: 82px 0 164px 0;
+  }
 }
+
 /* ===================/Common styles==================== */
