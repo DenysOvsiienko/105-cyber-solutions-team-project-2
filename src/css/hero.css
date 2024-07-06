@@ -108,6 +108,7 @@
   }
 
   .hero-title {
+    align-self: center;
     margin-bottom: 243px;
   }
 }
