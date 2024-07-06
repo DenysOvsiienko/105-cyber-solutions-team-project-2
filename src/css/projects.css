@@ -1,0 +1,111 @@
+.projects-h2 {
+  color: #fafafa66;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-bottom: 32px;
+}
+.projects-swiper {
+  overflow: hidden;
+}
+/* .projects-swiper-wrapper {
+  width: 279px;
+  height: 96px;
+} */
+
+.project-swiper-slide {
+  display: flex;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.projects-info {
+  background-color: #fafafa;
+  padding: 32px;
+}
+.projects-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  letter-spacing: -0.2em;
+  margin-bottom: 96px;
+}
+.projects-item-list {
+  padding: 12px 17px;
+  line-height: normal;
+  border-radius: 60px;
+  border: 1px solid rgba(28, 29, 32, 0.2);
+}
+.main-info {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 117%;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+}
+
+.project-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fafafa;
+  background: #ed3b44;
+  border-radius: 60px;
+  width: 141px;
+  height: 45px;
+  padding: 13px 32px;
+  letter-spacing: -0.02em;
+}
+
+/* .projects-swiper {
+  border-radius: 0 0 24px 24px;
+  width: 343px;
+  height: 395px;
+  background-color: #242527;
+  display: block;
+} */
+.projects-image-wtapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-container {
+    width: 704px;
+    height: 1191px;
+    gap: 0px;
+    border-radius: 24px 0px 0px 0px;
+    opacity: 0px;
+  }
+
+  .projects-info {
+    width: 704px;
+    height: 625px;
+    top: 566px;
+    padding: 120px 45px 120px 45px;
+    gap: 0px;
+    border-radius: 24px 24px 0px 0px;
+    opacity: 0px;
+  }
+  .projects-swiper {
+    width: 704px;
+    height: 625px;
+    top: 566px;
+    padding: 120px 45px 120px 45px;
+    gap: 0px;
+    border-radius: 0px 0px 24px 24px;
+    opacity: 0px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .projects-container {
+    border-radius: 24px 24px 0 0;
+    width: 688px;
+    height: 625px;
+  }
+}
