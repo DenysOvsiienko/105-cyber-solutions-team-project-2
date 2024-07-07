@@ -9,7 +9,7 @@
 }
 
 .projects-swiper-wrapper {
-  margin-bottom: 32px;
+  margin-bottom: 32px !important;
 }
 .project-swiper-slide {
   display: flex;
@@ -107,6 +107,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .projects-swiper-wrapper {
+    margin-bottom: 64px !important;
+  }
+
   .projects-info {
     padding: 64px;
   }
