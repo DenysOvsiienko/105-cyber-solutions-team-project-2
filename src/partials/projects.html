@@ -1,9 +1,9 @@
 <section class="projects" id="projects">
-  <div class="container projects-container">
-    <h2 class="projects-h2">Projects</h2>
+  <div class="container">
+    <h2 class="projects-title">Projects</h2>
     <div class="swiper projects-swiper">
       <ul class="swiper-wrapper projects-swiper-wrapper">
-        <li class="project-swiper-slide">
+        <li class="project-swiper-slide swiper-slide">
           <div class="projects-info">
             <ul class="projects-list">
               <li class="projects-item-list">#react</li>
@@ -26,25 +26,26 @@
               <source
                 media="(min-width: 768px)"
                 srcset="
-                  ./img/projects/expand-desc-1x.jpg 1x,
-                  ./img/projects/expand-desc-2x.jpg 2x
+                  ./img/projects/expand-desc-1x.png 1x,
+                  ./img/projects/expand-desc-2x.png 2x
                 "
               />
               <source
                 media="(min-width: 375px)"
                 srcset="
-                  ./img/projects/expand-mob-1x.jpg 1x,
-                  ./img/projects/expand-mob-2x.jpg 2x
+                  ./img/projects/expand-mob-1x.png 1x,
+                  ./img/projects/expand-mob-2x.png 2x
                 "
               />
 
-              <img src="./img/projects/expand-mob-1x.jpg" alt="expand" />
-              <!-- <img src="./img/projects/petlove-mob-1x.jpg" alt="petlove" />
-        <img src="./img/projects/register-mob-1x.jpg" alt="register" /> -->
+              <img
+                src="./img/projects/expand-mob-1x.png"
+                alt="Read Journey project"
+              />
             </picture>
           </div>
         </li>
-        <li class="swiper-slide">
+        <!-- <li class="project-swiper-slide swiper-slide">
           <div class="projects-info">
             <ul class="projects-list">
               <li class="projects-item-list">#react</li>
@@ -79,13 +80,11 @@
                 "
               />
 
-              <img src="./img/projects/petlove-mob-1x.jpg" alt="expand" />
-              <!-- <img src="./img/projects/petlove-mob-1x.jpg" alt="petlove" />
-        <img src="./img/projects/register-mob-1x.jpg" alt="register" /> -->
+              <img src="./img/projects/petlove-mob-1x.jpg" alt="Pet Love project" />
             </picture>
           </div>
         </li>
-        <li class="swiper-slide">
+        <li class="project-swiper-slide swiper-slide">
           <div class="projects-info">
             <ul class="projects-list">
               <li class="projects-item-list">#react</li>
@@ -121,18 +120,16 @@
               />
               <img
                 src="./img/projects/register-mob-1x.jpg"
-                alt="Read Journey project"
+                alt="Vocab Builder project"
               />
-              <!-- <img src="./img/projects/petlove-mob-1x.jpg" alt="petlove" />
-        <img src="./img/projects/register-mob-1x.jpg" alt="register" /> -->
             </picture>
           </div>
-        </li>
+        </li> -->
       </ul>
-      <div class="projects-button-wrapper">
+      <div class="projects-buttons-wrapper">
         <button
           type="button"
-          class="projects-button-prev"
+          class="projects-button-prev projects-button"
           aria-label="Swipe to the previous slide"
         >
           <svg class="projects-button-icon">
@@ -141,7 +138,7 @@
         </button>
         <button
           type="button"
-          class="projects-button-next"
+          class="projects-button-next projects-button"
           aria-label="Swipe to the next slide"
         >
           <svg class="projects-button-icon">
