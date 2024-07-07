@@ -12,15 +12,23 @@ const refs = {
   contentBoxModalElem: document.querySelector('.modal-content-box'),
   formSubmitBtnElem: document.querySelector('.form-submit-btn'),
 };
-console.log(refs.formSubmitBtnElem);
-refs.inputMailElem.addEventListener('input', event => {
-  if (!refs.inputMailElem.validity.valid) {
-    refs.formSubmitBtnElem.setAttribute('disabled', '');
-    createErrorMailNotif();
-  } else {
-    createMailSuccessNotif();
-    refs.formSubmitBtnElem.removeAttribute('disabled', '');
-  }
+
+refs.formElem.addEventListener('input', event => {
+  event.preventDefault();
+  checkInputValidity();
+  const formData = new FormData(refs.formElem);
+  const email = formData.get('email');
+  const comments = formData.get('comments');
+  saveToLS('email', email);
+  saveToLS('comments', comments);
+});
+
+window.addEventListener('DOMContentLoaded', event => {
+  const email = loadFromLS('email');
+  const comments = loadFromLS('comments');
+  refs.formElem.elements.email.value = email;
+  refs.formElem.elements.comments.value = comments;
+  checkInputValidity();
 });
 
 refs.formElem.addEventListener('submit', async event => {
@@ -31,11 +39,9 @@ refs.formElem.addEventListener('submit', async event => {
     const email = refs.formElem.elements.email.value.trim();
     const comment = refs.formElem.elements.comments.value.trim();
     const userData = { email, comment };
-    console.log(userData);
     clearNotifField();
     try {
       const response = await createRequest(userData);
-      console.log(response);
       const markup = modalTemplate(response);
       refs.contentBoxModalElem.insertAdjacentHTML('afterbegin', markup);
       refs.backDropElem.classList.remove('is-hidden');
@@ -44,6 +50,8 @@ refs.formElem.addEventListener('submit', async event => {
     }
   }
   event.target.reset();
+  localStorage.removeItem('email');
+  localStorage.removeItem('comments');
 });
 
 refs.closeModalElem.addEventListener('click', event => {
@@ -84,6 +92,31 @@ function modalTemplate(response) {
       ${response.data.message}
     </p>`;
 }
+
+function saveToLS(key, value) {
+  const jsonData = JSON.stringify(value);
+  localStorage.setItem(key, jsonData);
+}
+
+function loadFromLS(key) {
+  const json = localStorage.getItem(key);
+  try {
+    const data = JSON.parse(json);
+    return data;
+  } catch (err) {
+    return json;
+  }
+}
+function checkInputValidity() {
+  if (!refs.formElem.elements.email.validity.valid) {
+    refs.formSubmitBtnElem.setAttribute('disabled', '');
+    createErrorMailNotif();
+  } else {
+    createMailSuccessNotif();
+    refs.formSubmitBtnElem.removeAttribute('disabled', '');
+  }
+}
+
 function createErrorMailNotif() {
   refs.inputMailElem.classList.add('input-error');
   refs.spanValidElem.classList.add('notif-error');
