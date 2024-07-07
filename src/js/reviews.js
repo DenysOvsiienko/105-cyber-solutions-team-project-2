@@ -9,6 +9,7 @@ const urlapi = 'https://portfolio-js.b.goit.study/api/reviews';
 const reviewlist = document.querySelector('.reviews-list');
 const prevbtnEl = document.querySelector('.js-btn-prev');
 4;
+
 // console.dir(prevbtnEl);
 const nextbtnEl = document.querySelector('.js-btn-next');
 // console.dir(nextbtnEl);
@@ -16,6 +17,7 @@ const prevsvgbtn = document.querySelectorAll('.js-icon-prev');
 // console.dir(prevsvgbtn);
 const nextsvgbtn = document.querySelectorAll('.js-icon-next');
 // console.dir(nextsvgbtn);
+
 
 const fetchReviews = async url => {
   try {
@@ -27,6 +29,7 @@ const fetchReviews = async url => {
       message: 'Sorry, something went wrong. Please try again later.',
     });
     console.error('Data upload error:', error);
+
     return {};
   }
 };
@@ -59,3 +62,4 @@ fetchReviews(urlapi).then(reviews => {
     },
   });
 });
+

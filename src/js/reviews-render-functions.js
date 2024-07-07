@@ -1,5 +1,5 @@
 export const createReviewsList = reviews => {
-  return reviews
+    return reviews
     .map(
       reviewData => ` 
      <li class="reviews-item swiper-slide" id="${reviewData._id - 1}">
