@@ -71,7 +71,7 @@
   width: 24px;
   height: 24px;
   transition: stroke 200ms ease-in-out;
-  stroke: rgba(250, 250, 250, 0.5);
+  stroke: #fafafa;
   cursor: pointer;
 }
 
