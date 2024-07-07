@@ -4,13 +4,13 @@
   color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
 }
-.list-faq {
+#faq .list-faq {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.item-faq {
+#faq .item-faq {
   border-top: 1px solid rgba(250, 250, 250, 0.2);
 }
 .title-faq-wrapper {
@@ -18,7 +18,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.item-title-faq {
+#faq .item-title-faq {
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
@@ -26,7 +26,7 @@
   margin-bottom: 16px;
   min-width: 285px;
 }
-.faq-button {
+#faq .faq-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,8 +39,8 @@
   height: 34px;
   margin-top: 20px;
 }
-.faq-button:hover,
-.faq-button:focus {
+#faq .faq-button:hover,
+#faq .faq-button:focus {
   outline: transparent;
   border: 1px solid rgba(250, 250, 250, 1);
 }
@@ -58,14 +58,23 @@
   max-width: 100%;
 }
 
+.list-faq .ac {
+  margin-top: 0;
+  border: none;
+  background-color: transparent; 
+}
+#faq .ac .ac-trigger::after {
+  content: none;
+}
+
 /* ___Tablet adaptation____________________ */
 @media screen and (min-width: 768px) {
-  .item-title-faq {
+  #faq .item-title-faq {
     margin-top: 32px;
     margin-bottom: 26px;
     max-width: 584px;
   }
-  .faq-button {
+  #faq .faq-button {
     padding: 10px;
     width: 40px;
     height: 40px;
@@ -78,30 +87,26 @@
 
 /* ___Desktop adaptation___________________ */
 @media screen and (min-width: 1440px) {
-  .list-faq:first-child {
-    border-top: transparent;
-  }
-
-  .list-faq {
+  #faq .list-faq {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    /* border: 1px solid rgba(250, 250, 250, 0.2); */
+    
+    
   }
-  .item-faq {
+  #faq .item-faq {
     width: calc((100% - 32px) / 2);
     border-right: 1px solid rgba(250, 250, 250, 0.2);
     align-items: stretch;
   }
-  .item-title-faq {
+  #faq .item-title-faq {
     margin-top: 32px;
     margin-bottom: 26px;
     max-width: 574px;
-  }
-  .faq-button {
-    padding: 10px;
-    width: 40px;
-    height: 40px;
-    margin-top: 32px;
   }
   .text-faq {
     padding-bottom: 54px;
@@ -132,10 +137,10 @@
     border-left: transparent;
     padding-right: 32px;
   }
-  .item-order-thr,
-  .item-order-four,
-  .item-order-five {
-    border-right: transparent;
+  #faq .item-order-thr,
+  #faq .item-order-four,
+  #faq .item-order-five {
+    border-right: none;
     padding-left: 32px;
   }
 }
