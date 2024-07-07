@@ -40,7 +40,7 @@
       </label>
       <span class="valid-notification"></span>
     </div>
-    <div>
+    <div class="input-comments-box">
       <label for="comments">
         <input
           type="text"
@@ -53,9 +53,12 @@
       /></label>
       <span class="valid-notif-comm"></span>
     </div>
-    <button type="submit" class="form-submit-btn" aria-label="submit">
-      Send
-    </button>
+    <div class="loader-box">
+      <button type="submit" class="form-submit-btn" aria-label="submit">
+        Send
+      </button>
+      <div class="loader-wrap is-hidden"><span class="loader"></span></div>
+    </div>
   </form>
   <ul class="footer-contact-list">
     <li class="footer-contact-item">
@@ -68,7 +71,7 @@
     </li>
     <li class="footer-contact-item">
       <a
-        href="tel:+380 11 1111 11 11"
+        href="tel:+3801111111111"
         class="footer-contact-link"
         aria-label="Make a call to Lloyd Jefferson"
         >+380 11 1111 11 11</a
@@ -80,7 +83,7 @@
   <div class="footer-modal">
     <button type="button" class="footer-modal-close-btn" aria-label="close">
       <svg class="footer-modal-close-icon">
-        <use href="../img/icons.svg#icon-close"></use>
+        <use href="./img/icons.svg#icon-close"></use>
       </svg>
     </button>
     <div class="modal-content-box"></div>

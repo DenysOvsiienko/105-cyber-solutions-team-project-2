@@ -11,6 +11,7 @@ const refs = {
   closeModalElem: document.querySelector('.footer-modal-close-btn'),
   contentBoxModalElem: document.querySelector('.modal-content-box'),
   formSubmitBtnElem: document.querySelector('.form-submit-btn'),
+  loaderWrapElem: document.querySelector('.loader-wrap'),
 };
 
 refs.formElem.addEventListener('input', event => {
@@ -28,30 +29,34 @@ window.addEventListener('DOMContentLoaded', event => {
   const comments = loadFromLS('comments');
   refs.formElem.elements.email.value = email;
   refs.formElem.elements.comments.value = comments;
-  checkInputValidity();
 });
 
 refs.formElem.addEventListener('submit', async event => {
   event.preventDefault();
-  if (refs.formElem.elements.email.value === '') {
-    createEmptyFieldNotif();
-  } else if (refs.inputMailElem.validity.valid) {
+  if (
+    refs.formElem.elements.email.value === '' ||
+    !refs.formElem.elements.email.validity.valid
+  ) {
+    createErrorMailNotif();
+  } else {
     const email = refs.formElem.elements.email.value.trim();
     const comment = refs.formElem.elements.comments.value.trim();
     const userData = { email, comment };
     clearNotifField();
+    showLoader();
     try {
       const response = await createRequest(userData);
       const markup = modalTemplate(response);
       refs.contentBoxModalElem.insertAdjacentHTML('afterbegin', markup);
+      hideLoader();
       refs.backDropElem.classList.remove('is-hidden');
+      event.target.reset();
+      localStorage.removeItem('email');
+      localStorage.removeItem('comments');
     } catch (err) {
       iziToast.error(iziToastErrorObj);
     }
   }
-  event.target.reset();
-  localStorage.removeItem('email');
-  localStorage.removeItem('comments');
 });
 
 refs.closeModalElem.addEventListener('click', event => {
@@ -130,12 +135,6 @@ function createMailSuccessNotif() {
   refs.inputMailElem.classList.add('input-success');
 }
 
-function createEmptyFieldNotif() {
-  refs.inputMailElem.classList.add('input-error');
-  refs.spanValidElem.classList.add('notif-error');
-  refs.spanValidElem.textContent = 'Please, complete email field';
-}
-
 function clearNotifField() {
   refs.spanValidElem.textContent = '';
   refs.inputMailElem.classList.remove('input-success');
@@ -154,3 +153,11 @@ const iziToastErrorObj = {
   progressBarColor: 'rgb(255, 255, 255)',
   position: 'topRight',
 };
+
+function showLoader() {
+  refs.loaderWrapElem.classList.remove('is-hidden');
+}
+
+function hideLoader() {
+  refs.loaderWrapElem.classList.add('is-hidden');
+}

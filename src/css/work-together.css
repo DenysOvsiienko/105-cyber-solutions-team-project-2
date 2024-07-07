@@ -3,7 +3,9 @@
   padding-bottom: 32px;
   position: relative;
   background-image: url('/img/work-together/glass-efect-mob@1x-min.png');
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left 290px top;
+  background-size: 85px 589px;
 }
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -96,6 +98,7 @@
 }
 
 .form-submit-btn {
+  position: relative;
   border-radius: 100%;
   background-color: #ed3b44;
   width: 100px;
@@ -149,6 +152,8 @@
     padding-top: 80px;
     padding-bottom: 169px;
     background-image: url('/img/work-together/glass-effect-tab@1x-min.png');
+    background-position: left 570px top;
+    background-size: 198px 677px;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -195,10 +200,15 @@
   .container.footer-container {
     padding-left: 196px;
     padding-right: 196px;
+    background-position: left 1040px top;
+    background-size: 400px 677px;
   }
   .footer-form-input-mail,
   .footer-form-input-text {
     width: 390px;
+  }
+  .input-comments-box {
+    margin-right: 54px;
   }
 }
 /* MODAL WINDOW */
@@ -276,5 +286,55 @@
   .footer-modal-close-icon {
     width: 24px;
     height: 24px;
+  }
+}
+/* LOADER */
+.loader-box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.loader-wrap {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+.loader {
+  display: block;
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+}
+.loader:after {
+  box-shadow: 0 2px 0 #ff3d00 inset;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .loader {
+    width: 170px;
+    height: 170px;
+  }
+
+  .loader-box {
+    width: 150px;
+    height: 150px;
   }
 }
