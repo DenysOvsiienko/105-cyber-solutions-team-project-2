@@ -147,7 +147,12 @@
   }
 }
 @media screen and (min-width: 1440px) {
+  .projects-swiper-wrapper {
+    margin-left: 0;
+  }
+
   .project-swiper-slide {
+    display: flex !important;
     flex-direction: row;
   }
 
