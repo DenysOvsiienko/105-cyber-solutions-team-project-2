@@ -192,106 +192,62 @@
 }
 
 /*///////////    section Swiprer    ///////////*/
-
-.swiper-container-about-me {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-}
-
-.swiper-wrapper {
-  display: flex;
-}
-
-@media only screen and (min-width: 1440px) {
-  .swiper-wrapper {
-    margin-left: 32px;
-  }
-}
-
-.circle {
-  display: flex;
+.about-skills-circle {
   justify-content: center;
   align-items: center;
+  background-color: transparent;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 50%;
-  text-align: center;
-}
-
-.active-slide {
-  background-color: #ed3b44;
-  border-radius: 50%;
-}
-
-.active-slide:hover,
-.active-slide:focus {
-  background-color: #e0373f;
-}
-
-@media only screen and (min-width: 768px) {
-  .swiper-container-about-me {
-    font-size: 20px;
-  }
-
-  .circle {
-    width: 200px;
-    height: 200px;
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1439px) {
-  .slide-tab {
-    display: none;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .slide-mob {
-    display: none;
-  }
-
-  .circle {
-    width: 130px;
-    height: 130px;
-  }
-}
-
-.swiper-svg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.swiper-button-next {
-  stroke-width: 2px;
-  stroke: #3b3b3b;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  background: none;
-  border: none;
+  border-radius: 100px;
+  width: 130px !important;
+  aspect-ratio: 3/3;
   cursor: pointer;
 }
 
-@media only screen and (min-width: 768px) {
-  .swiper-button-next svg {
+.about-wrapper-item {
+  display: flex;
+}
+li.swiper-slide {
+  display: flex;
+}
+.about-skills-item {
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.about-skills-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  margin-left: 55px;
+}
+.swiper-svg {
+  fill: #838383;
+}
+
+.about-container-skills {
+  display: flex;
+}
+/*---------------------------- Adaptive tablet ----------------------------*/
+
+@media screen and (min-width: 768px) {
+  .about-skills-btn {
+    margin-left: 64px;
+  }
+  .about-skills-btn-icon {
     width: 40px;
     height: 40px;
   }
 }
+/*---------------------------- Adaptive desktop ----------------------------*/
 
-@media only screen and (min-width: 1440px) {
-  .swiper-button-next {
-    stroke-width: 2px;
-    stroke: #3b3b3b;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 32px;
-    background: none;
-    border: none;
-    cursor: pointer;
+@media screen and (min-width: 1440px) {
+  .about-container-skills {
+    margin-left: 32px;
+  }
+  .about-skills-circle {
+    width: 200px !important;
+  }
+  .about-skills-btn {
+    margin-left: 72px;
   }
 }
