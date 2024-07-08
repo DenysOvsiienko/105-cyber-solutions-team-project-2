@@ -6,4 +6,8 @@ const projectsSwiper = new Swiper('.projects-swiper', {
     nextEl: '.projects-button-next',
     prevEl: '.projects-button-prev',
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
 });

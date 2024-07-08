@@ -37,13 +37,14 @@ fetchReviews(urlapi).then(reviews => {
     reviewlist.innerHTML = '<p>Not found</p>';
   } else {
     reviewlist.innerHTML = createReviewsList(reviews);
-  };
+  }
   const reviewsSwiper = new Swiper('.swiper-reviews', {
     modules: Navigation,
     direction: 'horizontal',
     slidesPerView: 1,
     slidesPerGroup: 1,
-    spaceBetween: 18,
+    spaceBetween: 16,
+    touch: true,
     wrapperClass: 'reviews-list',
     slideClass: 'reviews-item',
     breakpoints: {
