@@ -92,8 +92,10 @@
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
+  cursor: pointer;
   gap: 23px;
 }
+
 .item-header-about-me {
   display: flex;
   justify-content: space-between;
