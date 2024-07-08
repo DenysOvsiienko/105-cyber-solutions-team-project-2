@@ -33,8 +33,11 @@ const fetchReviews = async url => {
 };
 fetchReviews(urlapi).then(reviews => {
   // console.log('Отримані відгуки:', reviews);
-  reviewlist.innerHTML = createReviewsList(reviews);
-
+  if (reviews.length === 0) {
+    reviewlist.innerHTML = '<p>Not found</p>';
+  } else {
+    reviewlist.innerHTML = createReviewsList(reviews);
+  };
   const reviewsSwiper = new Swiper('.swiper-reviews', {
     modules: Navigation,
     direction: 'horizontal',
