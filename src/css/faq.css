@@ -22,8 +22,19 @@
 .title-faq-wrapper {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  border-radius: 16px;
+  padding: 0 0 0 8px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 300ms ease-in-out;
 }
+.title-faq-wrapper:active,
+.title-faq-wrapper:hover {
+  background-color: #ffffff0d;
+}
+
 .item-title-faq {
   font-size: 20px;
   line-height: 1.5;
