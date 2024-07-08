@@ -73,7 +73,6 @@
 }
 
 .mobile-menu-list > li:hover,
-.mobile-menu-list > li:focus,
 .mobile-menu-list > li:active {
   color: #ed3b44;
   transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,7 +106,6 @@
 }
 
 .mobile-order-btn:hover,
-.mobile-order-btn:focus,
 .mobile-order-btn:active {
   background-color: #e0373f;
 }

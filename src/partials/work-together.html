@@ -1,0 +1,93 @@
+<footer>
+  <div class="container footer-container" id="work-together">
+    <picture class="footer-ava">
+      <source
+        srcset="
+          ./img/work-together/ava-footer-tab@1x.png 1x,
+          ./img/work-together/ava-footer-tab@2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./img/work-together/ava-footer-mob@1x.png 1x,
+          ./img/work-together/ava-footer-mob@2x.png 2x
+        "
+      />
+      <img
+        src="./img/work-together/ava-footer-mob@1x.png"
+        alt="developer's avatar"
+      />
+    </picture>
+    <h2 class="footer-title">
+      Let’s <span class="footer-title-accentColor">work</span> <br />
+      together
+    </h2>
+    <form class="footer-form" novalidate>
+      <div class="input-mail-box">
+        <label for="email">
+          <input
+            autocomplete="off"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="clients@gmail.com"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            required
+            class="footer-form-input-mail"
+            aria-label="Your email"
+          />
+        </label>
+        <span class="valid-notification"></span>
+      </div>
+      <div class="input-comments-box">
+        <label for="comments">
+          <input
+            type="text"
+            name="comments"
+            id="comments"
+            placeholder="comments"
+            class="footer-form-input-text"
+            autocomplete="off"
+            aria-label="Your comment"
+        /></label>
+        <span class="valid-notif-comm"></span>
+      </div>
+      <div class="loader-box">
+        <button type="submit" class="form-submit-btn" aria-label="submit">
+          Send
+        </button>
+        <div class="loader-wrap is-hidden"><span class="loader"></span></div>
+      </div>
+    </form>
+    <ul class="footer-contact-list">
+      <li class="footer-contact-item">
+        <a
+          href="mailto:lloydjefferson@gmail.com"
+          class="footer-contact-link"
+          aria-label="Send message to Lloyd Jefferson"
+          >lloydjefferson@gmail.com</a
+        >
+      </li>
+      <li class="footer-contact-item">
+        <a
+          href="tel:+3801111111111"
+          class="footer-contact-link"
+          aria-label="Make a call to Lloyd Jefferson"
+          >+380 11 1111 11 11</a
+        >
+      </li>
+    </ul>
+    <div class="footer-backdrop is-hidden">
+      <div class="footer-modal">
+        <button type="button" class="footer-modal-close-btn" aria-label="close">
+          <svg class="footer-modal-close-icon">
+            <use href="./img/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="modal-content-box"></div>
+      </div>
+    </div>
+  </div>
+</footer>

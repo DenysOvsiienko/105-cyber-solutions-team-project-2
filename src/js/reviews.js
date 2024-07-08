@@ -7,17 +7,15 @@ import 'swiper/css/bundle';
 const urlapi = 'https://portfolio-js.b.goit.study/api/reviews';
 
 const reviewlist = document.querySelector('.reviews-list');
-const prevbtnEl = document.querySelector('.js-btn-prev');
-4;
+const prevbtnEl = document.querySelector('.reviews-js-btn-prev');
 
 // console.dir(prevbtnEl);
-const nextbtnEl = document.querySelector('.js-btn-next');
+const nextbtnEl = document.querySelector('.reviews-js-btn-next');
 // console.dir(nextbtnEl);
-const prevsvgbtn = document.querySelectorAll('.js-icon-prev');
+const prevsvgbtn = document.querySelectorAll('.reviews-js-icon-prev');
 // console.dir(prevsvgbtn);
-const nextsvgbtn = document.querySelectorAll('.js-icon-next');
+const nextsvgbtn = document.querySelectorAll('.reviews-js-icon-next');
 // console.dir(nextsvgbtn);
-
 
 const fetchReviews = async url => {
   try {
@@ -35,15 +33,19 @@ const fetchReviews = async url => {
 };
 fetchReviews(urlapi).then(reviews => {
   // console.log('Отримані відгуки:', reviews);
-  reviewlist.innerHTML = createReviewsList(reviews);
-
-  const reviewsswiper = new Swiper('.swiper-reviews', {
+  if (reviews.length === 0) {
+    reviewlist.innerHTML = '<p>Not found</p>';
+  } else {
+    reviewlist.innerHTML = createReviewsList(reviews);
+  };
+  const reviewsSwiper = new Swiper('.swiper-reviews', {
     modules: Navigation,
     direction: 'horizontal',
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 18,
-
+    wrapperClass: 'reviews-list',
+    slideClass: 'reviews-item',
     breakpoints: {
       768: {
         slidesPerView: 2,
@@ -57,9 +59,12 @@ fetchReviews(urlapi).then(reviews => {
       },
     },
     navigation: {
-      nextEl: '.js-btn-next',
-      prevEl: '.js-btn-prev',
+      nextEl: '.reviews-js-btn-next',
+      prevEl: '.reviews-js-btn-prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
     },
   });
 });
-
