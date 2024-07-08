@@ -11,7 +11,7 @@ function openModal(event) {
     return;
   }
   const modalImg = basicLightbox.create(
-    `<img class="basic-img" srcset="${event.target.dataset.srcset}">`,
+    `<img class="basic-img" srcset="${event.target.previousElementSibling.previousElementSibling.srcset}">`,
     {
       onShow: modalImg => {
         window.addEventListener('keydown', escBtn);
