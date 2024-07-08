@@ -121,3 +121,11 @@
   left: 0;
   overflow: hidden;
 }
+
+.animated {
+  animation-name: marqueeLine;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

@@ -29,3 +29,29 @@ function openModal(event) {
     }
   }
 }
+
+function initCoversSection() {
+  const covers = document.querySelector('.section-cover');
+  const animatesEl = document.querySelectorAll('.marquee-line');
+  const addAnimationClass = () => {
+    animatesEl.forEach(animationEL => {
+      animationEL.classList.add('animated');
+    });
+  };
+  const removeAnimationClass = () => {
+    animatesEl.forEach(animationEL => {
+      animationEL.classList.remove('animated');
+    });
+  };
+  const followUser = new IntersectionObserver(watch => {
+    watch.forEach(youHere => {
+      if (youHere.isIntersecting) {
+        addAnimationClass();
+      } else {
+        removeAnimationClass();
+      }
+    });
+  });
+  followUser.observe(covers);
+}
+initCoversSection();
