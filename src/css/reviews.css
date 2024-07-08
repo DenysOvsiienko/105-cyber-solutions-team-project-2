@@ -13,6 +13,7 @@
 }
 
 .reviews-list {
+  display: flex;
   padding: 0px;
   width: auto;
   height: auto;
@@ -119,12 +120,12 @@
   background-color: rgb(136, 136, 136);
 }
 
-.swiper-wrapper {
+/* .swiper-wrapper {
   width: auto;
   height: auto;
   margin: 0 auto;
   padding: 0;
-}
+} */
 
 .swiper-reviews {
   width: auto;
