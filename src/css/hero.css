@@ -43,7 +43,6 @@
 }
 
 .hero-social-item a:hover,
-.hero-social-item a:focus,
 .hero-social-item a:active {
   outline: transparent;
   border: 1px solid rgba(250, 250, 250, 1);
