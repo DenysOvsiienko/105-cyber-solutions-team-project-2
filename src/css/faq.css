@@ -1,21 +1,21 @@
 /* ___Mobile adaptation____________________ */
 .title-faq {
+  font-size: 16px;
   line-height: 1.5;
   color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
 }
-#faq .list-faq {
+.list-faq {
   display: flex;
   flex-direction: column;
-  /* border-bottom: 1px solid rgba(250, 250, 250, 0.2); */
 }
 
-#faq .item-faq {
+.item-faq {
   border-top: 1px solid rgba(250, 250, 250, 0.2);
   padding: 20px 0;
 }
 
-#faq .item-faq:last-child {
+.item-faq:last-child {
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
@@ -24,14 +24,14 @@
   flex-direction: row;
   justify-content: space-between;
 }
-#faq .item-title-faq {
+.item-title-faq {
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
 
   min-width: 285px;
 }
-#faq .faq-button {
+.faq-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,8 +44,8 @@
   width: 34px;
   height: 34px;
 }
-#faq .faq-button:hover,
-#faq .faq-button:focus {
+.faq-button:hover,
+.faq-button:focus {
   outline: transparent;
   border: 1px solid rgba(250, 250, 250, 1);
 }
@@ -56,31 +56,33 @@
   transform: rotate(180deg);
 }
 .text-faq {
+  display: flex;
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
   max-width: 100%;
   margin-top: 16px;
+  overflow: hidden;
 }
 
-.list-faq .ac {
+.list-faq {
   margin-top: 0;
   border: none;
   background-color: transparent;
 }
-#faq .ac .ac-trigger::after {
+.title-faq-wrapper::after {
   content: none;
 }
 
 /* ___Tablet adaptation____________________ */
 @media screen and (min-width: 768px) {
-  #faq .item-faq {
+  .item-faq {
     padding: 32px 0;
   }
-  #faq .item-title-faq {
+  .item-title-faq {
     max-width: 584px;
   }
-  #faq .faq-button {
+  .faq-button {
     padding: 10px;
     width: 40px;
     height: 40px;
@@ -103,7 +105,7 @@
     border-top: transparent;
   }
 
-  #faq .item-title-faq {
+  .item-title-faq {
     max-width: 574px;
   }
   .text-faq {

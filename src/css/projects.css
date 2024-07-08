@@ -8,8 +8,19 @@
   margin-bottom: 32px;
 }
 
+.projects-swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
+
 .projects-swiper-wrapper {
-  margin-bottom: 32px;
+  margin-bottom: 32px !important;
 }
 .project-swiper-slide {
   display: flex;
@@ -95,19 +106,22 @@
   padding: 14px;
 }
 
+.projects-button-icon {
+  width: 24px;
+  height: 24px;
+}
+
 .projects-button-prev[disabled],
 .projects-button-next[disabled] {
   border: 1px solid rgba(250, 250, 250, 0.2);
   stroke: #3b3b3b;
 }
 
-.projects-button-icon {
-  width: 24px;
-  height: 24px;
-  stroke: rgb(250, 250, 250);
-}
-
 @media screen and (min-width: 768px) {
+  .projects-swiper-wrapper {
+    margin-bottom: 64px !important;
+  }
+
   .projects-info {
     padding: 64px;
   }
