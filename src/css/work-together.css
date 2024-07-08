@@ -217,7 +217,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -286,6 +286,12 @@
   .footer-modal-close-icon {
     width: 24px;
     height: 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer-backdrop {
+    position: fixed;
   }
 }
 /* LOADER */
