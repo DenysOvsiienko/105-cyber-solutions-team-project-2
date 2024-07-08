@@ -55,6 +55,7 @@ refs.formElem.addEventListener('submit', async event => {
       localStorage.removeItem('comments');
     } catch (err) {
       iziToast.error(iziToastErrorObj);
+      hideLoader();
     }
   }
 });
