@@ -152,7 +152,7 @@ const iziToastErrorObj = {
   iconColor: 'rgb(255, 255, 255)',
   theme: 'dark',
   progressBarColor: 'rgb(255, 255, 255)',
-  position: 'topRight',
+  position: 'bottomCenter',
 };
 
 function showLoader() {

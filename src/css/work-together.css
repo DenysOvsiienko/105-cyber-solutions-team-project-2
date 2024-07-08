@@ -2,6 +2,7 @@
   padding-top: 32px;
   padding-bottom: 32px;
   position: relative;
+  background-color: inherit;
   background-image: url('/img/work-together/glass-efect-mob@1x-min.png');
   background-repeat: no-repeat;
   background-position: left 290px top;
@@ -226,7 +227,7 @@
 }
 .footer-modal {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 343px;
@@ -281,6 +282,8 @@
     width: 492px;
     height: 246px;
     padding: 64px;
+    top: 50%;
+    left: 50%;
   }
 
   .footer-modal-close-icon {
