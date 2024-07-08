@@ -8,7 +8,6 @@ const urlapi = 'https://portfolio-js.b.goit.study/api/reviews';
 
 const reviewlist = document.querySelector('.reviews-list');
 const prevbtnEl = document.querySelector('.reviews-js-btn-prev');
-4;
 
 // console.dir(prevbtnEl);
 const nextbtnEl = document.querySelector('.reviews-js-btn-next');
@@ -43,6 +42,7 @@ fetchReviews(urlapi).then(reviews => {
     slidesPerGroup: 1,
     spaceBetween: 18,
     wrapperClass: 'reviews-list',
+    slideClass: 'reviews-item',
     breakpoints: {
       768: {
         slidesPerView: 2,
