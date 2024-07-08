@@ -6,3 +6,4 @@ import './js/projects';
 import './js/work-together';
 import './js/reviews';
 import './js/reviews-render-functions';
+// import './js/about-me';

@@ -113,7 +113,7 @@
   transition: background-color 500ms linear;
 }
 .form-submit-btn:hover,
-.form-submit-btn:focus {
+.form-submit-btn:active {
   background-color: #e0373f;
 }
 .form-submit-btn:disabled {
@@ -143,7 +143,7 @@
 }
 
 .footer-contact-link:hover,
-.footer-contact-link:focus {
+.footer-contact-link:active {
   border: 1px solid #fafafa;
 }
 

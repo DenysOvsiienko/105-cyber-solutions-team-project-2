@@ -82,7 +82,6 @@
 }
 
 .project-link:hover,
-.project-link:focus,
 .project-link:active {
   background: #e0373f;
 }
