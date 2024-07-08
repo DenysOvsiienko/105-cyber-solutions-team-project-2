@@ -11,46 +11,36 @@
         </p>
       </div>
       <picture>
-        <source
-          srcset="
+        <source srcset="
             ./img/about-me/about-me-desctop-min.png    1x,
             ./img/about-me/about-me-desctop@2x-min.png 2x
-          "
-          media="(min-width: 1440px)"
-        />
-        <source
-          srcset="
+          " media="(min-width: 1440px)" />
+        <source srcset="
             ./img/about-me/about-me-leptop-min.png    1x,
             ./img/about-me/about-me-leptop@2x-min.png 2x
-          "
-          media="(min-width: 768px)"
-        />
-        <source
-          srcset="
+          " media="(min-width: 768px)" />
+        <source srcset="
             ./img/about-me/about-me-mob-min.png    1x,
             ./img/about-me/about-me-mob@2x-min.png 2x
-          "
-          media="(max-width: 767px)"
-        />
+          " media="(max-width: 767px)" />
         <img src="./img/about-me/about-me-mob-min.png" alt="jefferson" />
       </picture>
     </div>
+
 
     <ul class="accordion-container-about-me">
       <li class="accordion-item-about-me is-active">
         <div class="block-about-me">
           <h3 class="item-header-about-me">About me</h3>
-          <button
-            type="button"
-            class="aboutme-accordion-trigger accordion-btn-about-me"
-            aria-label="show resume description"
-          >
+          <button type="button" class="accordion-trigger-about-me accordion-btn-about-me"
+            aria-label="show resume description">
             <svg class="icon-about-me" width="20px" height="20px">
               <use href="./img/icons.svg#icon-arrow-down"></use>
             </svg>
           </button>
         </div>
         <div class="accordion-panel-about-me">
+
           <p class="ac-panel-item">
             I am Lloyd Jefferson, a talented programmer with extensive expertise
             in software development. I have an understanding of different
@@ -72,17 +62,15 @@
             architectural concepts that allow me to create efficient and
             scalable software.
           </p>
+
         </div>
       </li>
 
       <li class="accordion-item-about-me">
         <div class="block-about-me">
           <h3 class="item-header-about-me">Role</h3>
-          <button
-            type="button"
-            class="aboutme-accordion-trigger accordion-btn-about-me"
-            aria-label="show role description"
-          >
+          <button type="button" class="accordion-trigger-about-me  accordion-btn-about-me"
+            aria-label="show role description">
             <svg class="icon-about-me" width="20px" height="20px">
               <use href="./img/icons.svg#icon-arrow-down"></use>
             </svg>
@@ -98,20 +86,15 @@
       <li class="accordion-item-about-me">
         <div class="block-about-me">
           <h3 class="item-header-about-me">Education</h3>
-          <button
-            type="button"
-            class="aboutme-accordion-trigger accordion-btn-about-me"
-            aria-label="show education description"
-          >
+          <button type="button" class="accordion-trigger-about-me  accordion-btn-about-me"
+            aria-label="show education description">
             <svg class="icon-about-me" width="20px" height="20px">
               <use href="./img/icons.svg#icon-arrow-down"></use>
             </svg>
           </button>
         </div>
 
-        <ul
-          class="accordion-panel-about-me item-list-about-me aboutme-item-list-mob"
-        >
+        <ul class="accordion-panel-about-me item-list-about-me aboutme-item-list-mob">
           <li class="ac-panel-item">
             <p class="education-text">
               2018 - 2019 / Frontend Development Diploma, GoIT IT <br />
