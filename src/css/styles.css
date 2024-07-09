@@ -20,7 +20,8 @@
 @font-face {
   font-family: 'Inter Tight';
   src: url('../fonts/InterTight/InterTight-Medium.woff2') format('woff2'),
-    url('../fonts/InterTight/InterTight-Medium.woff') format('woff');
+    url('../fonts/InterTight/InterTight-Medium.woff') format('woff'),
+    url('../fonts/InterTight/InterTight-SemiBold.ttf') format('ttf');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -29,7 +30,8 @@
 @font-face {
   font-family: 'Inter Tight';
   src: url('../fonts/InterTight/InterTight-SemiBold.woff2') format('woff2'),
-    url('../fonts/InterTight/InterTight-SemiBold.woff') format('woff');
+    url('../fonts/InterTight/InterTight-SemiBold.woff') format('woff'),
+    url('../fonts/InterTight/InterTight-SemiBold.ttf') format('ttf');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
