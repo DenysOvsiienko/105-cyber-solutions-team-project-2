@@ -112,3 +112,29 @@
     margin-bottom: 243px;
   }
 }
+
+/* Hero Title Animation */
+
+.hero-title-animation-first {
+  position: relative;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.hero-title-animation-second {
+  position: relative;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  transition-delay: 1000ms;
+}
+.hero-title-animation-third {
+  position: relative;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  transition-delay: 1500ms;
+}
+
+.hero-title-animation-first.hero-title-visible,
+.hero-title-animation-second.hero-title-visible,
+.hero-title-animation-third.hero-title-visible {
+  opacity: 1;
+}
