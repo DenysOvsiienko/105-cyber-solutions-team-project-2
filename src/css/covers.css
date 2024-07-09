@@ -124,7 +124,7 @@
 
 .animated {
   animation-name: marqueeLine;
-  animation-duration: 7s;
+  animation-duration: 25s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
