@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalTitle = document.getElementById("modal-title");
     const modalText = document.getElementById("modal-text");
     const modalSvg = document.querySelector(".modal-svg");
+    const body = document.body;
+
+    function openModal() {
+        modal.style.display = "flex";
+        body.style.overflow = "hidden"; 
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+        body.style.overflow = "auto"; 
+    }
 
     document.querySelectorAll(".benefits-item").forEach(item => {
         item.addEventListener("click", () => {
@@ -13,17 +24,23 @@ document.addEventListener("DOMContentLoaded", () => {
             modalSvg.innerHTML = "";
             modalSvg.appendChild(svgIcon);
 
-            modal.style.display = "flex";
+            openModal();
         });
     });
 
     document.querySelector(".close").addEventListener("click", () => {
-        modal.style.display = "none";
+        closeModal();
     });
 
     window.addEventListener("click", (event) => {
         if (event.target == modal) {
-            modal.style.display = "none";
+            closeModal();
+        }
+    });
+
+    window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeModal();
         }
     });
 });
