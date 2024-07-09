@@ -109,3 +109,7 @@
 .mobile-order-btn:active {
   background-color: #e0373f;
 }
+
+body.mobile-menu {
+  overflow: hidden;
+}

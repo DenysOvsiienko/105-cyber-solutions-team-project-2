@@ -119,6 +119,49 @@
   }
 }
 
-/* ___Desktop adaptation________________________________ */
+/* Back to Top button */
+
+.back-to-top-btn {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(250, 250, 250, 0.3);
+  background-color: #ed3b4441;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99999999;
+  bottom: -50px;
+  padding: 8px 8px;
+  right: 16px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.back-to-top-btn:active,
+.back-to-top-btn:hover {
+  border: 1px solid rgba(250, 250, 250, 1);
+  background-color: #ed3b44;
+}
+
+.back-to-top-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.back-to-top-btn.back-to-top-btn-active {
+  bottom: 50px;
+  transition: 0.3s all;
+}
+
+/* ___Tablet adaptation_________________________________ */
+@media screen and (min-width: 768px) {
+  .back-to-top-btn {
+    right: 32px;
+  }
+}
+
+/* ___Desktop adaptation_________________________________ */
 @media screen and (min-width: 1440px) {
+  .back-to-top-btn {
+    right: 50px;
+  }
 }

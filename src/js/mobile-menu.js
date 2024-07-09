@@ -29,9 +29,3 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMenu);
   });
 });
-window.addEventListener('scroll', () => {
-  document.documentElement.style.setProperty(
-    '--scroll-y',
-    `${window.scrollY}px`
-  );
-});
