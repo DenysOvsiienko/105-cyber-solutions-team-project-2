@@ -12,7 +12,7 @@
 
 .item-faq {
   border-top: 1px solid rgba(250, 250, 250, 0.2);
-  padding: 20px 0;
+  padding: 20px 0 10px 0;
 }
 
 .item-faq:last-child {
@@ -26,7 +26,7 @@
   justify-content: space-between;
   border-radius: 16px;
   padding: 0 0 0 8px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   cursor: pointer;
   background-color: transparent;
   transition: background-color 300ms ease-in-out;
@@ -91,6 +91,11 @@
   .item-faq {
     padding: 32px 0 16px 0;
   }
+
+  .title-faq-wrapper {
+    margin-bottom: 16px;
+  }
+
   .item-title-faq {
     max-width: 584px;
   }
