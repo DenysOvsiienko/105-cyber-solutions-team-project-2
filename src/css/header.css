@@ -12,6 +12,8 @@
 }
 
 .header-logo-link {
+  display: flex;
+  gap: 8px;
   border: 1px solid transparent;
 }
 
@@ -21,8 +23,6 @@
 }
 
 .header-logo-container {
-  display: flex;
-  gap: 8px;
 }
 
 .header-menu-container {
