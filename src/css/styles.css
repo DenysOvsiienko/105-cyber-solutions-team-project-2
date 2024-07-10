@@ -48,4 +48,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --default-hero-bg-image-mobile: url(/img/hero/hero-mob.png);
+  --default-hero-bg-image-mobile-2x: url(/img/hero/hero-mob@2x.png);
+  --default-hero-bg-image-tablet: url(/img/hero/hero-tablet.png);
+  --default-hero-bg-image-tablet-2x: url(/img/hero/hero-tablet@2x.png);
+  --default-hero-bg-image-desktop: url(/img/hero/hero-desktop.png);
+  --default-hero-bg-image-desktop-2x: url(/img/hero/hero-desctop@2x.png);
+  --default-text-span-color: #ed3b44;
+  --default-button-bg-color: #ed3b44;
+  --default-button-bg-color-hover: #e0373f;
+  --back-to-top-btn-color: #ed3b4441;
 }
