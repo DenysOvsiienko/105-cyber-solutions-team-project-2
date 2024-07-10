@@ -5,21 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuLinks = menu.querySelectorAll('a');
 
   function openMenu() {
-    menu.classList.add('open');
+    menu.classList.add('menu-open');
     menu.setAttribute('aria-hidden', 'false');
-    const body = document.body;
-    body.style.position = 'fixed';
-    body.style.top = `-${scrollY}`;
+    document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
-    menu.classList.remove('open');
+    menu.classList.remove('menu-open');
     menu.setAttribute('aria-hidden', 'true');
-    const body = document.body;
-    const scrollY = body.style.top;
-    body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    document.body.style.overflow = '';
   }
 
   menuToggle.addEventListener('click', openMenu);
@@ -29,3 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMenu);
   });
 });
+
+function checkScreenWidth() {
+  const screenWidth = window.innerWidth;
+  const mobileMenu = document.querySelector('#mobile-menu');
+  if (screenWidth >= 768 && mobileMenu.classList.contains('menu-open')) {
+    mobileMenu.classList.remove('menu-open');
+  }
+}
+window.addEventListener('load', checkScreenWidth);
+window.addEventListener('resize', checkScreenWidth);
