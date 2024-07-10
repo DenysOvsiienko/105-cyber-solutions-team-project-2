@@ -161,7 +161,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .container.footer-container {
-      background-image: url('../img/work-together/glass-effect-tab@2x-min.png');
+      background-image: url('/img/work-together/glass-effect-tab@2x-min.png');
     }
   }
   .footer-title {
