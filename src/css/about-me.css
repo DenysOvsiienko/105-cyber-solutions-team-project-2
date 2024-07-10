@@ -54,7 +54,7 @@
 }
 
 .functional {
-  color: #ed3b44;
+  color: var(--default-accent-color);
 }
 .websites {
   color: rgba(250, 250, 250, 0.4);
@@ -249,7 +249,7 @@
 }
 
 .about-skills-circle-active {
-  background-color: #ed3b44;
+  background-color: var(--default-accent-color);
 }
 
 .about-skills-btn {

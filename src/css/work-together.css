@@ -31,7 +31,7 @@
 }
 
 .footer-title-accentColor {
-  color: #ed3b44;
+  color: var(--default-accent-color);
 }
 .footer-form {
   margin-bottom: 64px;
@@ -101,7 +101,7 @@
 .form-submit-btn {
   position: relative;
   border-radius: 100%;
-  background-color: #ed3b44;
+  background-color: var(--default-accent-color);
   width: 100px;
   height: 100px;
   font-weight: 500;
@@ -114,7 +114,7 @@
 }
 .form-submit-btn:hover,
 .form-submit-btn:active {
-  background-color: #e0373f;
+  background-color: var(--default-accent-color-hover);
 }
 .form-submit-btn:disabled {
   opacity: 0.5;
@@ -161,7 +161,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .container.footer-container {
-      background-image: url('../img/work-together/glass-effect-tab@2x-min.png');
+      background-image: url('/img/work-together/glass-effect-tab@2x-min.png');
     }
   }
   .footer-title {

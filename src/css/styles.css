@@ -49,14 +49,17 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --default-hero-bg-image-mobile: url(/img/hero/hero-mob.png);
-  --default-hero-bg-image-mobile-2x: url(/img/hero/hero-mob@2x.png);
-  --default-hero-bg-image-tablet: url(/img/hero/hero-tablet.png);
-  --default-hero-bg-image-tablet-2x: url(/img/hero/hero-tablet@2x.png);
-  --default-hero-bg-image-desktop: url(/img/hero/hero-desktop.png);
-  --default-hero-bg-image-desktop-2x: url(/img/hero/hero-desctop@2x.png);
-  --default-text-span-color: #ed3b44;
-  --default-button-bg-color: #ed3b44;
-  --default-button-bg-color-hover: #e0373f;
-  --back-to-top-btn-color: #ed3b4441;
+  --default-hero-bg-image-mobile: url('/img/hero/hero-mob.png');
+  --default-hero-bg-image-mobile-2x: url('/img/hero/hero-mob@2x.png');
+  --default-hero-bg-image-tablet: url('/img/hero/hero-tablet.png');
+  --default-hero-bg-image-tablet-2x: url('/img/hero/hero-tablet@2x.png');
+  --default-hero-bg-image-desktop: url('/img/hero/hero-desktop.png');
+  --default-hero-bg-image-desktop-2x: url('/img/hero/hero-desctop@2x.png');
+  --default-covers-bg-image: url('/img/covers/bg-covers.png');
+  --default-covers-bg-image-2x: url('/img/covers/bg-covers@2x.png');
+  --default-work-together-bg-image-mobile: url('/img/work-together/glass-efect-mob@1x-min.png');
+  --default-work-together-bg-image-mobile-2x: url('/img/work-together/glass-efect-mob@2x-min.png');
+  --default-accent-color: #ed3b44;
+  --default-accent-color-hover: #e0373f;
+  --back-to-top-btn-accent-color: #ed3b4441;
 }
