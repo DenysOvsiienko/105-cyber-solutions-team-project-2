@@ -9,3 +9,4 @@ import './js/reviews-render-functions';
 import './js/about-me';
 import './js/hero';
 import './js/benefits';
+import './js/theme-switcher';
