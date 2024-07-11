@@ -29,6 +29,7 @@ function checkScreenWidth() {
   const mobileMenu = document.querySelector('#mobile-menu');
   if (screenWidth >= 768 && mobileMenu.classList.contains('menu-open')) {
     mobileMenu.classList.remove('menu-open');
+    document.body.style.overflow = '';
   }
 }
 window.addEventListener('load', checkScreenWidth);
