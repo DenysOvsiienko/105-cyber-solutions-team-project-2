@@ -9,6 +9,7 @@
 .hero-container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .hero-title {
@@ -137,4 +138,118 @@
 .hero-title-animation-second.hero-title-visible,
 .hero-title-animation-third.hero-title-visible {
   opacity: 1;
+}
+
+/* Theme colors */
+
+.theme-changer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: -180px;
+  right: 40px;
+}
+
+.theme-title {
+  display: flex;
+  align-self: flex-start;
+  padding-top: 6px;
+}
+
+.theme-span {
+  color: var(--default-accent-color);
+}
+.theme-change-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--default-accent-color);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  stroke: #fafafa;
+  fill: transparent;
+  background-color: var(--default-accent-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-color-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-change-icon:hover {
+  background-color: var(--default-accent-color-hover);
+}
+
+/* Theme switcher */
+input + svg {
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[class='red-theme']:hover + svg,
+input[class='red-theme']:checked + svg,
+input[class='red-theme']:focus + svg {
+  fill: #ed3b44;
+}
+
+input[class='red-theme'] + svg {
+  fill: #ed3b4481;
+}
+
+input[class='green-theme']:hover + svg,
+input[class='green-theme']:checked + svg,
+input[class='green-theme']:focus + svg {
+  fill: #c6e327;
+}
+
+input[class='green-theme'] + svg {
+  fill: #c6e32781;
+}
+
+input[class='blue-theme']:hover + svg,
+input[class='blue-theme']:checked + svg,
+input[class='blue-theme']:focus + svg {
+  fill: #0041e8;
+}
+
+input[class='blue-theme'] + svg {
+  fill: #0041e881;
+}
+
+input[class='coral-theme']:hover + svg,
+input[class='coral-theme']:checked + svg,
+input[class='coral-theme']:focus + svg {
+  fill: #e6533c;
+}
+
+input[class='coral-theme'] + svg {
+  fill: #e6533c81;
+}
+
+input[class='dark-cyan-theme']:hover + svg,
+input[class='dark-cyan-theme']:checked + svg,
+input[class='dark-cyan-theme']:focus + svg {
+  fill: #2b4441;
+}
+
+input[class='dark-cyan-theme'] + svg {
+  fill: #2b444181;
+}
+
+input[class='orange-theme']:hover + svg,
+input[class='orange-theme']:checked + svg,
+input[class='orange-theme']:focus + svg {
+  fill: #ff7f08;
+}
+
+input[class='orange-theme'] + svg {
+  fill: #ff7f0881;
 }
