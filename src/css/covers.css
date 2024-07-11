@@ -6,13 +6,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url(../img/covers/bg-covers.png);
+  background-image: var(--default-covers-bg-image);
 }
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .container.covers-container {
-    background-image: url(../img/covers/bg-covers@2x.png);
+    background-image: var(-default-covers-bg-image-2x);
   }
 }
 .content {
