@@ -110,7 +110,7 @@
   }
 }
 
-/* Back to Top button */
+/* =====Back to Top button===== */
 
 .back-to-top-btn {
   display: flex;
@@ -119,7 +119,7 @@
   background-color: var(--back-to-top-btn-accent-color);
   border-radius: 50%;
   position: fixed;
-  z-index: 99999999;
+  z-index: 999;
   bottom: -50px;
   padding: 8px 8px;
   right: 16px;
@@ -156,3 +156,25 @@
     right: 50px;
   }
 }
+/* ====/Back to Top button===== */
+
+/* =====Progress bar===== */
+.progress-bar {
+  height: 2px;
+  position: fixed;
+  top: 0;
+  z-index: 1000000;
+  background-color: var(--default-accent-color);
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: progress-bar linear;
+  animation-timeline: scroll();
+}
+
+@keyframes progress-bar {
+  to {
+    scale: 1 1;
+  }
+}
+/* ====/Progress bar===== */
