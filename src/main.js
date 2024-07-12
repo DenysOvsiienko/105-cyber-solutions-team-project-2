@@ -1,3 +1,4 @@
+import './js/theme-switcher';
 import './js/mobile-menu';
 import './js/header';
 import './js/covers';
