@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modalSvg.appendChild(svgIcon);
 
       openModal();
+      document.body.style.overflow = 'hidden';
     });
   });
 
@@ -32,17 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
     .querySelector('.benefits-modal-close')
     .addEventListener('click', () => {
       closeModal();
+      document.body.removeAttribute('style');
     });
 
   window.addEventListener('click', event => {
     if (event.target == modal) {
       closeModal();
+      document.body.removeAttribute('style');
     }
   });
 
   window.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
       closeModal();
+      document.body.removeAttribute('style');
     }
   });
 });
