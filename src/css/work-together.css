@@ -39,7 +39,7 @@
 .footer-form-input-mail,
 .footer-form-input-text {
   display: block;
-  width: 343px;
+  max-width: 343px;
   height: 44px;
   background-color: transparent;
   border: none;
@@ -229,7 +229,7 @@
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 343px;
+  max-width: 343px;
   min-height: 276px;
   background-color: #1c1d20;
   border: 1px solid rgba(250, 250, 250, 0.1);
