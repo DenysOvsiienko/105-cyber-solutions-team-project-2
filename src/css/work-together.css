@@ -175,7 +175,7 @@
   }
   .footer-form-input-mail,
   .footer-form-input-text {
-    width: 245px;
+    max-width: 245px;
     margin-bottom: 0;
   }
   .form-submit-btn {
