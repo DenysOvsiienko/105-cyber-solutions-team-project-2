@@ -100,11 +100,13 @@
   transition: background-color 300ms ease-in-out;
 }
 .block-about-me:active,
+.block-about-me:focus-visible,
 .block-about-me:hover {
   background-color: #ffffff0d;
 }
 
 .block-about-me:active .about-me-accordion-btn,
+.block-about-me:focus-visible .about-me-accordion-btn,
 .block-about-me:hover .about-me-accordion-btn {
   border: 1px solid #fff;
 }
@@ -264,6 +266,7 @@
 }
 
 .about-skills-btn:hover,
+.about-skills-btn:focus-visible,
 .about-skills-btn:active {
   stroke: #fafafa;
 }

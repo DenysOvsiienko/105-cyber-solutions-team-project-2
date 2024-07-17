@@ -32,11 +32,13 @@
   transition: background-color 300ms ease-in-out;
 }
 .title-faq-wrapper:active,
+.title-faq-wrapper:focus-visible,
 .title-faq-wrapper:hover {
   background-color: #ffffff0d;
 }
 
 .title-faq-wrapper:active .faq-button,
+.title-faq-wrapper:focus-visible .faq-button,
 .title-faq-wrapper:hover .faq-button {
   border: 1px solid #fff;
 }

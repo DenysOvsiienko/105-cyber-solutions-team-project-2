@@ -82,6 +82,7 @@
 }
 
 .project-link:hover,
+.project-link:focus-visible,
 .project-link:active {
   background-color: var(--default-accent-color-hover);
 }

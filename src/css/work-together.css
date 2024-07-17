@@ -112,6 +112,7 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-submit-btn:hover,
+.form-submit-btn:focus-visible,
 .form-submit-btn:active {
   background-color: var(--default-accent-color-hover);
 }
@@ -142,6 +143,7 @@
 }
 
 .footer-contact-link:hover,
+.footer-contact-link:focus-visible,
 .footer-contact-link:active {
   border: 1px solid #fafafa;
 }
