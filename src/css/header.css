@@ -102,7 +102,7 @@
   }
 
   .header-order-link:hover,
-  .header-order-link:focus-visible .header-order-link:active {
+  .header-order-link:focus-visible, .header-order-link:active {
     background-color: var(--default-accent-color-hover);
   }
 
